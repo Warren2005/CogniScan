@@ -64,9 +64,9 @@ CogniScan/
 
 | Model      | Accuracy | F1-Score | Notes                          |
 |------------|----------|----------|--------------------------------|
-| SVM        | 91.3%    | 0.89     | Fast to train, small size      |
-| XGBoost    | 92.1%    | 0.90     | Strong generalization          |
-| CNN        | 94.7%    | 0.93     | Best performance, deeper model |
+| SVM        | -        | -        | Fast to train, small size      |
+| XGBoost    | -        | -        | Strong generalization          |
+| CNN        | -        | -        | Best performance, deeper model |
 
 > *Note: Results may vary slightly based on dataset splits and hyperparameters.*
 
