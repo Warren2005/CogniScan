@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+xgboost
+tensorflow
+opencv-python
+jupyter
+joblib              # saving/loading sklearn models
+streamlit           
+python-dotenv       # For managing config or API keys
