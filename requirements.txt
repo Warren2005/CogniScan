@@ -1,11 +1,24 @@
-numpy
+
 pandas
-matplotlib
+
 seaborn
-scikit-learn
+
 xgboost
 tensorflow
 jupyter
-joblib              # saving/loading sklearn models
 streamlit           
 python-dotenv       # For managing config or API keys
+opencv-python>=4.8.0
+numpy>=1.24.0
+scikit-learn>=1.2.0
+joblib>=1.2.0
+pyttsx3>=2.90
+matplotlib>=3.7.0
+mediapipe>=0.10.0
+openai>=1.0.0
+langchain>=0.0.300
+
+# If you add deep learning later:
+# tensorflow>=2.12.0
+# torch>=2.0.0
+# torchvision>=0.15.0
