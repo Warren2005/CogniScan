@@ -4,7 +4,7 @@ import numpy as np
 import joblib
 import time
 from collections import deque
-#import pyttsx3  # For TTS
+import pyttsx3  # For TTS
 # from openai import OpenAI  # Uncomment if you're using GPT feedback
 
 # === CONFIG ===
@@ -16,11 +16,11 @@ PREDICTION_THRESHOLD = 0.6  # adjust as needed
 svm_model = joblib.load(MODEL_PATH)
 
 # === Set up Text-to-Speech ===
-#tts_engine = pyttsx3.init()
+tts_engine = pyttsx3.init()
 
-# def speak_message(message):
-#     tts_engine.say(message)
-#     tts_engine.runAndWait()
+def speak_message(message):
+    tts_engine.say(message)
+    tts_engine.runAndWait()
 
 # === Optional: GPT-4 Prompt (pseudo-code) ===
 # client = OpenAI()
@@ -77,11 +77,11 @@ while True:
     cv2.imshow('CogniScan - Focus Analyzer', frame)
 
     # === Example: TTS feedback ===
-    # if rolling_preds.count("Stressed") > ROLLING_WINDOW_SIZE // 2:
-    #     speak_message("You seem stressed. Take a deep breath and refocus.")
-    #     # feedback = get_gpt_feedback("Stressed")
-    #     # speak_message(feedback)
-    #     time.sleep(5)  # Avoid spamming
+    if rolling_preds.count(0) > ROLLING_WINDOW_SIZE // 2:
+        speak_message("You seem stressed. Take a deep breath and refocus.")
+        # feedback = get_gpt_feedback("Stressed")
+        # speak_message(feedback)
+        time.sleep(5)  # Avoid spamming
 
     # === Break ===
     if cv2.waitKey(1) & 0xFF == ord('q'):
